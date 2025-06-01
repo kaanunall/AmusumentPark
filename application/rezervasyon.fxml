@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #d1c4e9, #f8bbd0);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RezervasyonController">
+    <!-- Rezervasyon Formu -->
+    <VBox fx:id="reservationForm" layoutX="50.0" layoutY="50.0" spacing="20">
+        <Label style="-fx-font-size: 24; -fx-text-fill: #0598ff;" text="Rezervasyon Yap">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        
+        <VBox spacing="10">
+            <Label text="Tarih Seçimi:" />
+            <DatePicker fx:id="datePicker" prefWidth="300.0" style="-fx-border-color: #0598ff; -fx-background-color: 0px 0px 2px 0px; -fx-border-width: 0px 0px 2px 0px;" />
+        </VBox>
+        
+        <VBox spacing="10">
+            <Label text="Saat Dilimi:" />
+            <ComboBox fx:id="timeSlotCombo" prefWidth="300.0" promptText="Lütfen saat aralığı seçiniz." style="-fx-border-color: #0598ff; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+        </VBox>
+        
+        <VBox spacing="10">
+            <Label text="Paket Seçimi:" />
+            <RadioButton fx:id="standardPackage" selected="true" text="Standart Paket (200₺)" />
+            <RadioButton fx:id="ultraPackage" text="Ultra Paket (400₺)" />
+        </VBox>
+        
+        <VBox spacing="10">
+            <Label text="Ödeme Yapılacak Hesap:" />
+            <ComboBox fx:id="hesapComboBox" prefWidth="300.0" promptText="Lütfen hesap seçiniz" style="-fx-border-color: #0598ff; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+            <Label fx:id="bakiyeLabel" style="-fx-text-fill: #666666;" text="Seçili Hesap Bakiyesi: " />
+        </VBox>
+        
+        <Button fx:id="confirmButton" onAction="#confirmReservation" prefWidth="300.0" style="-fx-background-color: #0598ff; -fx-text-fill: white;" text="Rezervasyon Yap" />
+    </VBox>
+
+    <!-- Mevcut Rezervasyon Bilgileri -->
+    <VBox fx:id="existingReservation" layoutX="50.0" layoutY="50.0" spacing="20" visible="false">
+        <Label style="-fx-font-size: 24; -fx-text-fill: #0598ff;" text="Mevcut Rezervasyonunuz">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        
+        <VBox spacing="10">
+            <Label fx:id="reservationDetails" style="-fx-font-size: 16;" wrapText="true" />
+        </VBox>
+        
+        <Button fx:id="cancelButton" onAction="#cancelReservation" prefWidth="300.0" style="-fx-background-color: #ff4444; -fx-text-fill: white;" text="Rezervasyonu İptal Et" />
+    </VBox>
+   <ImageView fitHeight="606.0" fitWidth="399.0" layoutX="405.0" layoutY="-2.0">
+      <image>
+         <Image url="@../resimler/bright-blue-color-solid-background-1920x1080.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="185.0" fitWidth="281.0" layoutX="492.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../resimler/logo.png" />
+      </image>
+   </ImageView>
+</AnchorPane>

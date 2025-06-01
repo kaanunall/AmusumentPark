@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="402.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #d1c4e9, #f8bbd0);" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UyeProfilController">
+    
+    <children>
+        <Label layoutX="127.0" layoutY="30.0" text="Profil Düzenle" textFill="#0598ff">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+
+        <VBox layoutX="50.0" layoutY="100.0" prefWidth="300.0" spacing="20">
+            <children>
+                <TextField fx:id="adField" promptText="Ad" style="-fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px; -fx-background-color: transparent;" />
+                <TextField fx:id="soyadField" promptText="Soyad" style="-fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px; -fx-background-color: transparent;" />
+                <TextField fx:id="emailField" promptText="E-mail" style="-fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px; -fx-background-color: transparent;" />
+                <PasswordField fx:id="sifreField" promptText="Yeni Şifre" style="-fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px; -fx-background-color: transparent;" />
+                <PasswordField fx:id="sifreTekrarField" promptText="Yeni Şifre Tekrar" style="-fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px; -fx-background-color: transparent;" />
+                
+                <Button fx:id="kaydetButton" onAction="#kaydetButtonClick" prefWidth="300.0" style="-fx-background-color: #0598ff; -fx-border-color: black;" text="Değişiklikleri Kaydet" textFill="WHITE" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

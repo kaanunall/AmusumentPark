@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #d1c4e9, #f8bbd0);" stylesheets="@yonetici_style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.YetkiliController">
+   <children>
+      <TabPane layoutX="14.0" layoutY="14.0" prefHeight="572.0" prefWidth="772.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab style="-fx-background-color: white; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598ff;" text="Üye Yönetimi">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <children>
+                  <VBox spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <padding>
+                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <children>
+                      <VBox alignment="CENTER" spacing="10">
+                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Üye Yönetimi" />
+                        <HBox alignment="CENTER" spacing="10">
+                          <TextField fx:id="tf_ara" onAction="#tf_arama_uye" prefWidth="200.0" promptText="Ara..." style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #d1c4e9, #f8bbd0); -fx-border-color: gray;" />
+                          <Button fx:id="uyeAramaButton" onAction="#uyeAramaButton_click" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Ara" />
+                        </HBox>
+                      </VBox>
+                      <HBox alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="751.0" spacing="10">
+                        <Button fx:id="uyeDuzenleButton" onAction="#uyeDuzenleButton_click" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Üye Düzenle" />
+                        <Button fx:id="uyeSilButton" onAction="#uyeSilButton_click" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="Üye Sil" />
+                      </HBox>
+                      <TableView fx:id="uyeTableView" prefHeight="400.0" prefWidth="750.0" VBox.vgrow="ALWAYS">
+                        <columns>
+                          <TableColumn fx:id="uyeTcColumn" prefWidth="100" text="TC" />
+                          <TableColumn fx:id="uyeAdColumn" prefWidth="100" text="Ad" />
+                          <TableColumn fx:id="uyeSoyadColumn" prefWidth="124.0" text="Soyad" />
+                          <TableColumn fx:id="uyeEmailColumn" prefWidth="206.39993286132812" text="E-posta" />
+                          <TableColumn fx:id="uyeTelefonColumn" prefWidth="199.2000732421875" text="Telefon" />
+                        </columns>
+                      </TableView>
+                    </children>
+                  </VBox>
+                </children>
+              </AnchorPane>
+            </content>
+          </Tab>
+          <Tab style="-fx-background-color: white; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598ff;" text="Puan İşlemleri">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <children>
+                  <VBox spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <padding>
+                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <children>
+                      <HBox alignment="CENTER" spacing="10.0">
+                        <Label text="Arama:" />
+                        <TextField fx:id="puanAramaTextField" prefWidth="300.0" promptText="Ara..." style="-fx-border-color: gray; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #d1c4e9, #f8bbd0);" />
+                      </HBox>
+                      <HBox alignment="CENTER" spacing="10">
+                        <Button fx:id="puanEkleButton" onAction="#puanEkleButton_click" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Puan Ekle" />
+                        <Button fx:id="puanDusButton" onAction="#puanDusButton_click" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="Puan Düş" />
+                      </HBox>
+                      <TableView fx:id="puanTableView" prefHeight="400.0" prefWidth="750.0" VBox.vgrow="ALWAYS">
+                        <columns>
+                          <TableColumn fx:id="puanTcColumn" text="ID" />
+                          <TableColumn fx:id="puanAdColumn" prefWidth="112.00000762939453" text="Ad" />
+                          <TableColumn fx:id="puanSoyadColumn" prefWidth="96.0" text="Soyad" />
+                          <TableColumn fx:id="puanMiktarColumn" prefWidth="112.0" text="Puan" />
+                          <TableColumn fx:id="puanTarihColumn" minWidth="0.0" prefWidth="348.7999572753906" />
+                        </columns>
+                      </TableView>
+                    </children>
+                  </VBox>
+                </children>
+              </AnchorPane>
+            </content>
+          </Tab>
+          <Tab style="-fx-background-color: white; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598ff;" text="Rezervasyon">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <children>
+                  <VBox spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <padding>
+                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <children>
+                      <HBox alignment="CENTER" spacing="10.0">
+                        <Label text="Arama:" />
+                        <TextField fx:id="rezervasyonAramaTextField" prefWidth="300.0" promptText="Ara..." style="-fx-border-color: gray; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #d1c4e9, #f8bbd0);" />
+                        <Button fx:id="rezervasyonIptalButton" onAction="#rezervasyonIptalButton_click" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="Rezervasyon İptal" />
+                      </HBox>
+                      <TableView fx:id="rezervasyonTableView" prefHeight="400.0" prefWidth="750.0" VBox.vgrow="ALWAYS">
+                        <columns>
+                          <TableColumn fx:id="rezervasyonTcColumn" text="TC" />
+                          <TableColumn fx:id="rezervasyonAdColumn" text="Ad" />
+                          <TableColumn fx:id="rezervasyonSoyadColumn" text="Soyad" />
+                          <TableColumn fx:id="rezervasyonTarihColumn" prefWidth="100.0" text="Tarih" />
+                          <TableColumn fx:id="rezervasyonSaatDilimiColumn" prefWidth="119.20001220703125" text="Saat Dilimi" />
+                          <TableColumn fx:id="rezervasyonPaketTipiColumn" prefWidth="115.19992065429688" text="Paket Tipi" />
+                          <TableColumn fx:id="rezervasyonDurumColumn" prefWidth="116.0" text="Durum" />
+                        </columns>
+                      </TableView>
+                    </children>
+                  </VBox>
+                </children>
+              </AnchorPane>
+            </content>
+          </Tab>
+          <Tab style="-fx-background-color: white; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598ff;" text="Sıra Tablosu">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <children>
+                  <VBox spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <padding>
+                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <children>
+                      <HBox alignment="CENTER" spacing="10.0">
+                        <Label text="Oyuncak Seçin:" />
+                        <ComboBox fx:id="siraOyuncakComboBox" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #d1c4e9, #f8bbd0); -fx-border-color: gray;" />
+                      </HBox>
+                      <HBox alignment="CENTER" spacing="10.0">
+                        <Label text="Arama:" />
+                        <TextField fx:id="siraAramaTextField" prefWidth="300.0" promptText="Ara..." style="-fx-border-color: gray; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #d1c4e9, #f8bbd0);" />
+                      </HBox>
+                      <HBox alignment="CENTER" spacing="10">
+                        <TextField fx:id="siraTcTextField" prefWidth="100" promptText="TC" style="-fx-border-color: gray; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #d1c4e9, #f8bbd0);" />
+                        <TextField fx:id="siraSiraTextField" prefWidth="100" promptText="Sıra No" style="-fx-border-color: gray; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #d1c4e9, #f8bbd0);" />
+                        <Button fx:id="siraEkleButton" onAction="#siraEkleButton_click" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Sıra Ekle" />
+                        <Button fx:id="siraSilButton" onAction="#siraSilButton_click" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="Sıra Sil" />
+                      </HBox>
+                      <TableView fx:id="siraTableView" prefHeight="400.0" prefWidth="750.0" VBox.vgrow="ALWAYS">
+                        <columns>
+                          <TableColumn fx:id="siraTcColumn" text="TC" />
+                          <TableColumn fx:id="siraAdColumn" text="Ad" />
+                          <TableColumn fx:id="siraSoyadColumn" text="Soyad" />
+                          <TableColumn fx:id="siraSiraColumn" text="Sıra No" />
+                          <TableColumn fx:id="siraTarihColumn" text="Tarih" />
+                        </columns>
+                      </TableView>
+                    </children>
+                  </VBox>
+                </children>
+              </AnchorPane>
+            </content>
+          </Tab>
+          <Tab closable="false" style="-fx-background-color: white; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598ff;" text="Şifre Sıfırlama Geçmişi">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <children>
+                  <VBox spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <padding>
+                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <children>
+                      <HBox alignment="CENTER" spacing="10.0">
+                        <Label text="Arama:" />
+                        <TextField fx:id="sifreAramaTextField" prefWidth="300.0" promptText="TC veya Kod ile ara..." style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #d1c4e9, #f8bbd0); -fx-border-color: gray;" />
+                      </HBox>
+                      <TableView fx:id="sifreSifirlamaTableView" prefHeight="400.0" prefWidth="750.0" VBox.vgrow="ALWAYS">
+                        <columns>
+                          <TableColumn fx:id="sifreTcColumn" text="TC" />
+                          <TableColumn fx:id="sifreKodColumn" prefWidth="111.20001983642578" text="Kod" />
+                          <TableColumn fx:id="sifreSonGecerlilikColumn" prefWidth="132.79998779296875" text="Son Geçerlilik" />
+                          <TableColumn fx:id="sifreKullanildiColumn" prefWidth="198.39993286132812" text="Kullanıldı" />
+                        </columns>
+                      </TableView>
+                    </children>
+                  </VBox>
+                </children>
+              </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Form1Controller">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="361.0">
+         <image>
+            <Image url="@../resimler/bright-blue-color-solid-background-1920x1080.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="291.0" fitWidth="345.0" layoutX="35.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resimler/istockphoto-1285176346-612x612-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="66.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOŞGELDİNİZ">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="145.0" fitWidth="175.0" layoutX="93.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resimler/logo.png" />
+         </image>
+      </ImageView>
+      <TabPane layoutX="361.0" prefHeight="500.0" prefWidth="439.0" style="-fx-background-color: #0598ff;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab style="-fx-border-color: #0598ff;" text="Üye Girişi">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #d1c4e9, #f8bbd0);">
+                     <children>
+                        <ImageView fitHeight="91.0" fitWidth="89.0" layoutX="192.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resimler/33308.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="186.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Üye Girişi">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="uye_mail" layoutX="162.0" layoutY="164.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+                        <PasswordField fx:id="uye_sifre" layoutX="162.0" layoutY="207.0" promptText="Şifre" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+                        <Button fx:id="uye_button_giris" layoutX="249.0" layoutY="266.0" mnemonicParsing="false" onAction="#uye_button_giris_click" style="-fx-border-color: black; -fx-background-color: #0598ff;" text="Giriş Yap" />
+                        <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="110.0" layoutY="163.0">
+                           <image>
+                              <Image url="@../resimler/email.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="110.0" layoutY="206.0">
+                           <image>
+                              <Image url="@../resimler/icons8-password-30.png" />
+                           </image>
+                        </ImageView>
+                        <Hyperlink fx:id="sifremiUnuttumLink" layoutX="182.0" layoutY="422.0" onAction="#sifremiUnuttumLink_click" text="Şifreni mi unuttun?" />
+                        <Hyperlink fx:id="kayit_ol_hyperlink" layoutX="164.0" layoutY="398.0" onAction="#openKayitOlPage" text="Hesabın yok mu? Kayıt ol." />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab style="-fx-border-color: #0598ff;" text="Personel Girişi">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #fff176, #4fc3f7);">
+                     <children>
+                        <ImageView fitHeight="91.0" fitWidth="89.0" layoutX="192.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resimler/33308.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="162.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personel Girişi">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="tf_email_giris" layoutX="162.0" layoutY="164.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+                        <PasswordField fx:id="tf_sifre_giris" layoutX="162.0" layoutY="207.0" promptText="Şifre" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+                        <Button fx:id="button_giris" layoutX="249.0" layoutY="266.0" mnemonicParsing="false" onAction="#button_girirs_click" style="-fx-border-color: black; -fx-background-color: #0598ff;" text="Giriş Yap" />
+                        <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="110.0" layoutY="163.0">
+                           <image>
+                              <Image url="@../resimler/email.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="110.0" layoutY="206.0">
+                           <image>
+                              <Image url="@../resimler/icons8-password-30.png" />
+                           </image>
+                        </ImageView>
+                        <Hyperlink fx:id="personel_sifre" layoutX="182.0" layoutY="420.0" onAction="#personel_sifre_click" text="Şifreni mi unuttun?" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab style="-fx-border-color: #0598ff;" text="Yönetici Girişi">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #90caf9, #ce93d8);">
+                     <children>
+                        <ImageView fitHeight="91.0" fitWidth="89.0" layoutX="192.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resimler/33308.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="165.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yönetici Girişi">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="yonetici_mail" layoutX="162.0" layoutY="164.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+                        <PasswordField fx:id="yonetici_sifre" layoutX="162.0" layoutY="207.0" promptText="Şifre" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+                        <Button fx:id="yonetici_button_giris" layoutX="249.0" layoutY="266.0" mnemonicParsing="false" onAction="#yonetici_button_giris_click" style="-fx-border-color: black; -fx-background-color: #0598ff;" text="Giriş Yap" />
+                        <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="110.0" layoutY="163.0">
+                           <image>
+                              <Image url="@../resimler/email.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="110.0" layoutY="206.0">
+                           <image>
+                              <Image url="@../resimler/icons8-password-30.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAnchorPane" prefHeight="800.0" prefWidth="1500.0" style="-fx-background-color: #0598ff;" stylesheets="@yonetici_style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.uyecontroller">
+    <ImageView fitHeight="803.0" fitWidth="883.0" layoutX="626.0" layoutY="-1.0">
+      <image>
+         <Image url="@../resimler/Adsız%20tasarım.png" />
+      </image>
+    </ImageView>
+
+    <!-- Notification Pane -->
+    <AnchorPane fx:id="notificationPane" layoutX="600" layoutY="-70" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);">
+        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 10;">
+            <ImageView fx:id="notificationIcon" fitHeight="30.0" fitWidth="30.0">
+                <image>
+                    <Image url="@../resimler/ticket.png" />
+                </image>
+            </ImageView>
+            <Label fx:id="notificationLabel" style="-fx-font-size: 14px; -fx-text-fill: #333333;" text="Bilet adedi güncellendi" />
+        </HBox>
+    </AnchorPane>
+
+    <Label layoutX="141.0" layoutY="55.0" style="-fx-text-fill: white;" text="Puan ve Sıralama">
+      <font>
+         <Font size="35.0" />
+      </font>
+      <effect>
+        <DropShadow color="#00000040" radius="5" />
+      </effect>
+    </Label>
+
+    <AnchorPane layoutX="39.0" layoutY="132.0" prefHeight="320.0" prefWidth="490.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);">
+        <children>
+            <Rectangle arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="320.0" width="490.0" />
+            <TableView fx:id="puanTable" prefHeight="320.0" prefWidth="490.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="100" text="ID">
+                    </TableColumn>
+                    <TableColumn fx:id="adColumn" prefWidth="131.19998168945312" text="Ad">
+                    </TableColumn>
+                    <TableColumn fx:id="soyadColumn" prefWidth="156.800048828125" text="Soyad">
+                    </TableColumn>
+                    <TableColumn fx:id="puanColumn" prefWidth="81.5999755859375" text="Puan">
+                    </TableColumn>
+                </columns>
+                <style>
+                    
+                </style>
+            </TableView>
+        </children>
+    </AnchorPane>
+   <Label layoutX="180.0" layoutY="476.0" style="-fx-text-fill: white;" text="Kampanyalar">
+      <font>
+         <Font size="35.0" />
+      </font>
+      <effect>
+        <DropShadow color="#00000040" radius="5" />
+      </effect>
+   </Label>
+   <AnchorPane layoutX="38.0" layoutY="539.0" prefHeight="232.0" prefWidth="494.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);">
+        <children>
+            <Rectangle arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="232.0" width="494.0" />
+            <TableView fx:id="kampanyaTable" prefHeight="232.0" prefWidth="494.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <columns>
+                    <TableColumn fx:id="kampanyaIdColumn" prefWidth="96.5333251953125" text="KampanyaID" />
+                    <TableColumn fx:id="kampanyaAciklamaColumn" prefWidth="394.6666564941406" text="Açıklama" />
+                </columns>
+                <style>
+                   
+                </style>
+            </TableView>
+        </children>
+    </AnchorPane>
+   <AnchorPane layoutX="1057.0" layoutY="19.0" prefHeight="126.0" prefWidth="68.0">
+      <children>
+         <ImageView fitHeight="75.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../resimler/profile.png" />
+            </image>
+         </ImageView>
+         <Label fx:id="welcomeLabel" alignment="CENTER" layoutY="75.0" prefHeight="51.0" text="Merhaba kullanıcı" textAlignment="CENTER" AnchorPane.leftAnchor="-126.0" AnchorPane.rightAnchor="-126.0">
+            <font>
+               <Font size="24.0" />
+            </font>
+         </Label>
+         
+         <AnchorPane fx:id="biletPane" layoutY="126.0" onMouseEntered="#biletPaneHoverEffect" onMouseExited="#biletPaneExitEffect" prefHeight="40.0" prefWidth="320.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);" AnchorPane.leftAnchor="-126.0" AnchorPane.rightAnchor="-126.0">
+            <children>
+               <ImageView fx:id="ticketIcon" fitHeight="24.0" fitWidth="24.0" layoutX="15.0" layoutY="8.0">
+                  <image>
+                     <Image url="@../resimler/ticket.png" />
+                  </image>
+               </ImageView>
+               <Label fx:id="biletAdetLabel" layoutX="50.0" layoutY="5.0" prefHeight="30.0" prefWidth="255.0" style="-fx-text-fill: #0598ff;" text="Bilet Adedi: 0">
+                  <font>
+                     <Font name="System Bold" size="20.0" />
+                  </font>
+               </Label>
+               <Rectangle fx:id="highlightRect" arcHeight="40" arcWidth="40" height="40.0" style="-fx-fill: #0598ff; -fx-opacity: 0;" width="320.0" />
+            </children>
+         </AnchorPane>
+      </children>
+   </AnchorPane>
+   
+   <ButtonBar layoutX="782.0" layoutY="204.0" prefHeight="40.0" prefWidth="582.0">
+     <buttons>
+       <Button fx:id="profileButton" mnemonicParsing="false" onAction="#profileButton_click" style="-fx-background-color: white; -fx-border-color: #0598ff; -fx-border-radius: 5; -fx-background-radius: 5;" text="Profili Düzenle" textFill="#0598ff">
+           <style>
+               
+           </style>
+       </Button>
+       <Button fx:id="bilet_al" mnemonicParsing="false" onAction="#bilet_al_click" style="-fx-background-color: white; -fx-border-color: #0598ff; -fx-border-radius: 5; -fx-background-radius: 5;" text="Bilet Al" textFill="#0598ff">
+           <style>
+              
+           </style>
+       </Button>
+       <Button fx:id="siraButton" onAction="#siraButton_click" style="-fx-background-color: white; -fx-border-color: #0598ff; -fx-border-radius: 5; -fx-background-radius: 5;" text="Sıra" textFill="#0598ff">
+           <style>
+             
+           </style>
+       </Button>
+       <Button fx:id="reservationButton" onAction="#reservationButton_click" style="-fx-background-color: white; -fx-border-color: #0598ff; -fx-border-radius: 5; -fx-background-radius: 5;" text="Rezervasyon" textFill="#0598ff">
+           <style>
+               
+           </style>
+       </Button>
+         <Button fx:id="bankaButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#bankaButton_click" style="-fx-background-color: white; -fx-border-color: #0598ff; -fx-border-radius: 5; -fx-background-radius: 5;" text="Banka" textFill="#0598ff">
+            <style>
+                -fx-cursor: hand;
+            </style>
+         </Button>
+     </buttons>
+     <style>
+        
+     </style>
+   </ButtonBar>
+   <ImageView fitHeight="390.0" fitWidth="713.0" layoutX="731.0" layoutY="344.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-radius: 75; -fx-background-color: white;">
+      <image>
+         <Image url="@../resimler/download.png" />
+      </image>
+   </ImageView>
+   <Label layoutX="991.0" layoutY="265.0" text="Park Haritası">
+      <font>
+         <Font size="35.0" />
+      </font>
+   </Label>
+   <Hyperlink fx:id="yorumsikayet" layoutX="974.0" layoutY="739.0" onAction="#yorumsikayetclick" text="Yorum &amp; Şikayet">
+      <font>
+         <Font size="30.0" />
+      </font>
+   </Hyperlink>
+</AnchorPane>

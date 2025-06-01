@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #d1c4e9, #f8bbd0);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PersonelEkleController">
+    <VBox spacing="10" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+        
+        <GridPane hgap="10" vgap="10">
+            <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="emailField" style="-fx-background-color: transparent; -fx-border-color: gray;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            
+            <Label text="Şifre:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <PasswordField fx:id="sifreField" style="-fx-background-color: transparent; -fx-border-color: gray;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            
+            <Label text="Ad:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="adField" style="-fx-background-color: transparent; -fx-border-color: gray;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            
+            <Label text="Soyad:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="soyadField" style="-fx-background-color: transparent; -fx-border-color: gray;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            
+            <Label text="TC:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <TextField fx:id="tcField" style="-fx-background-color: transparent; -fx-border-color: gray;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            
+            <Label text="Telefon:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <TextField fx:id="telefonField" style="-fx-background-color: transparent; -fx-border-color: gray;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            
+            <Label text="Resim:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                <ImageView fx:id="resimView" fitHeight="100" fitWidth="100" preserveRatio="true" />
+                <Button onAction="#resimSec" style="-fx-background-color: gray; -fx-text-fill: white;" text="Resim Seç" />
+            </HBox>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+        
+        <HBox alignment="CENTER_RIGHT" spacing="10">
+            <Button onAction="#kaydet" style="-fx-background-color: #0598ff; -fx-border-color: black;" text="Kaydet" />
+            <Button onAction="#iptal" style="-fx-background-color: red; -fx-border-color: black;" text="İptal" />
+        </HBox>
+    </VBox>
+</AnchorPane>

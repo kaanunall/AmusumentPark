@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="492.0" prefWidth="755.0" spacing="10" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #d1c4e9, #f8bbd0);" stylesheets="@yonetici_style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MusterilerController">
+    <TextField fx:id="aramaKutusu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="260.0" promptText="Ara..." style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #d1c4e9, #f8bbd0); -fx-border-color: gray;" />
+    <TableView fx:id="musteriTablosu" prefHeight="400.0" prefWidth="726.0" xmlns="http://javafx.com/javafx/23.0.1">
+        <columns>
+            <TableColumn fx:id="tcSutun" prefWidth="100.79998624324799" text="TC" />
+            <TableColumn fx:id="adSutun" prefWidth="136.00000762939453" text="Ad" />
+            <TableColumn fx:id="soyadSutun" prefWidth="156.0" text="SoyAd" />
+            <TableColumn fx:id="emailSutun" prefWidth="183.99996948242188" text="Email" />
+            <TableColumn fx:id="telefonSutun" prefWidth="155.19989013671875" text="Telefon" />
+        </columns>
+    </TableView>
+    <HBox prefHeight="33.0" prefWidth="746.0" spacing="10">
+        <Button onAction="#uyeDuzenle" style="-fx-border-color: black; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #fff176, #4fc3f7);" text="Üye Düzenle" />
+        <Button onAction="#uyeSil" style="-fx-background-color: red; -fx-border-color: black;" text="Üye Sil" />
+    </HBox>
+</VBox>

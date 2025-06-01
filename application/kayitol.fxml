@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #d1c4e9, #f8bbd0);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Form1Controller">
+   <children>
+      <ImageView fitHeight="509.0" fitWidth="361.0" layoutY="-8.0">
+         <image>
+            <Image url="@../resimler/bright-blue-color-solid-background-1920x1080.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="kayit_soyad" layoutX="508.0" layoutY="237.0" promptText="SoyAd" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <PasswordField fx:id="kayit_sifre" layoutX="508.0" layoutY="368.0" promptText="Şifre" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598ff;" />
+      <Button fx:id="kayit_button" layoutX="599.0" layoutY="417.0" mnemonicParsing="false" onAction="#kayit_button_click" style="-fx-border-color: black; -fx-background-color: #0598ff;" text="Kayıt Ol" />
+      <ImageView fitHeight="291.0" fitWidth="345.0" layoutX="45.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resimler/istockphoto-1285176346-612x612-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="76.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOŞGELDİNİZ">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="145.0" fitWidth="175.0" layoutX="103.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resimler/logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="75.0" layoutX="546.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resimler/33308.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="449.0" layoutY="280.0">
+         <image>
+            <Image url="@../resimler/email.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="449.0" layoutY="367.0">
+         <image>
+            <Image url="@../resimler/icons8-password-30.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="529.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kayıt Ol">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+      <Hyperlink fx:id="hp_giris" layoutX="466.0" layoutY="462.0" onAction="#hp_geri" text="Zaten bir hesabın var mı? Giriş yap." />
+      <TextField fx:id="kayit_ad" layoutX="508.0" layoutY="194.0" promptText="Ad" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <TextField fx:id="kayit_mail" layoutX="508.0" layoutY="281.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <ImageView fitHeight="28.0" fitWidth="34.0" layoutX="449.0" layoutY="237.0">
+         <image>
+            <Image url="@../resimler/user%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="449.0" layoutY="193.0">
+         <image>
+            <Image url="@../resimler/user.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="kayit_tc" layoutX="508.0" layoutY="152.0" promptText="TC Numarası" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="448.0" layoutY="151.0">
+         <image>
+            <Image url="@../resimler/id.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="kayit_telefon" layoutX="508.0" layoutY="322.0" promptText="Telefon" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="449.0" layoutY="321.0">
+         <image>
+            <Image url="@../resimler/phone-receiver-silhouette.png" />
+         </image>
+      </ImageView>
+
+   </children>
+</AnchorPane>

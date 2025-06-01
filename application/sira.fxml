@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@yonetici_style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SiraController">
+   <children>
+      <VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #d1c4e9, #f8bbd0);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <Label fx:id="welcomeLabel" text="Hoş Geldiniz" />
+            <Label fx:id="siraDurumLabel" text="Sıra Durumu: Beklemede" />
+            
+            <ComboBox fx:id="oyuncakComboBox" promptText="Oyuncak Seçin" style="-fx-border-width: 0px 0px 2px 0px; -fx-background-color: transparent; -fx-border-color: #0598ff;" />
+            
+            <TableView fx:id="siraTableView" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598ff; -fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn fx:id="siraNoColumn" text="Sıra No" />
+                  <TableColumn fx:id="adColumn" text="Ad" />
+                  <TableColumn fx:id="soyadColumn" text="Soyad" />
+               </columns>
+            </TableView>
+            
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Button fx:id="sirayaKatilButton" onAction="#sirayaKatil" style="-fx-background-color: #0598ff;" text="Sıraya Katıl" textFill="WHITE" />
+                  <Button fx:id="siraIptalButton" onAction="#siraIptal" style="-fx-background-color: #0598ff;" text="Sıra İptal" textFill="WHITE" />
+                  <Button fx:id="kapatButton" onAction="#kapat" style="-fx-background-color: #0598ff;" text="Kapat" textFill="WHITE" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

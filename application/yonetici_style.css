@@ -1,0 +1,79 @@
+/* Tüm arka plan gradyanı sadece AnchorPane'e */
+.table-view {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #d1c4e9, #f8bbd0);
+    
+    }
+
+/* TableView arka planı ve her şeyi şeffaf */
+.table-view, .TextField {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #d1c4e9, #f8bbd0);
+    -fx-control-inner-background: transparent;
+-fx-table-cell-border-color: transparent;
+    -fx-padding: 0;
+    -fx-border-color: transparent;
+    
+}
+
+/* Sütun başlıkları arka planı */
+.table-view .column-header-background,
+.table-view .column-header,
+.table-view .table-column,
+.table-view .filler {
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Sütun başlıkları çizgisi */
+.table-view .column-header {
+    -fx-border-color: rgba(0, 0, 0, 0.1); /* Hafif gri çizgi */
+    -fx-border-width: 0 0 1 0; /* Alt çizgi */
+    
+}
+
+/* Hücreler arası çizgiler */
+.table-cell {
+    -fx-border-color: rgba(0, 0, 0, 0.1); /* İnce, açık gri çizgi */
+    -fx-border-width: 0 1 1 0; /* Sağ ve alt çizgi */
+    -fx-text-fill: black;
+    
+}
+
+/* Satır çizgileri */
+.table-row-cell {
+    -fx-border-color: rgba(0, 0, 0, 0.1); /* Hafif gri çizgi */
+    -fx-border-width: 0 0 1 0; /* Yalnızca alt çizgi */
+}
+
+/* Hover ve seçili satır efekti */
+.table-row-cell:filled:hover {
+    -fx-background-color: rgba(255,255,255, 0.1); /* Hafif vurgulama */
+}
+
+.table-row-cell:filled:selected {
+    -fx-background-color: rgba(255,255,255, 0.15); /* Seçili satır */
+}
+
+/* Scrollbar genel görünüm */
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: transparent; /* Arka plan */
+}
+
+/* Scrollbar rayı (çubuğun gittiği alan) */
+.scroll-bar .track {
+    -fx-background-color: #e1bee7; /* Hafif morumsu */
+    -fx-background-radius: 8;
+}
+
+/* Scrollbar çubuğu (kaydırma kısmı) */
+.scroll-bar .thumb {
+    -fx-background-color:  linear-gradient(from 0% 0% to 100% 100%, #90caf9, #ce93d8); /* Asıl çubuğun rengi */
+    -fx-background-insets: 2;
+    -fx-background-radius: 8;
+}
+
+/* Scrollbar ok butonları (isteğe bağlı) */
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 4;
+}

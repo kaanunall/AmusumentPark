@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1300.0" styleClass="root-pane" stylesheets="@yonetici_style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.YoneticiController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="910.0">
+         <image>
+            <Image url="@../resimler/bright-blue-color-solid-background-1920x1080.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="sikayetTable" layoutX="33.0" layoutY="107.0" prefHeight="354.0" prefWidth="705.0">
+        <columns>
+          <TableColumn fx:id="sikayetAd" prefWidth="101.87" text="Ad" />
+          <TableColumn fx:id="sikayetSoyad" prefWidth="95.47" text="Soyad" />
+          <TableColumn fx:id="sikayetMesaj" prefWidth="290.4" text="Mesaj" />
+          <TableColumn fx:id="sikayetTür" prefWidth="83.2" text="Tür" />
+          <TableColumn fx:id="sikayetTarih" prefWidth="127.199951171875" text="Tarih" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="650.0" fitWidth="539.0" layoutX="761.0" style="-fx-background-color: white; -fx-border-color: #0598ff;">
+         <image>
+            <Image url="@../resimler/Adsız%20tasarım.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="262.0" layoutY="51.0" text="Üye Değerlendirmeleri">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="welcomeLabel" layoutX="961.0" layoutY="55.0" text="Merhaba yonetici">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="51.0" fitWidth="48.0" layoutX="1007.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resimler/profile.png" />
+         </image>
+      </ImageView>
+      <ButtonBar layoutX="832.0" layoutY="87.0" prefHeight="40.0" prefWidth="384.0">
+        <buttons>
+            <Button fx:id="profilyonetim" mnemonicParsing="false" style="-fx-background-color: white; -fx-border-color: #0598ff;" text="Profil Düzenle" />
+            <Button fx:id="musteriyonetim" mnemonicParsing="false" onAction="#musterilerSayfasiniAc" style="-fx-background-color: white; -fx-border-color: #0598ff;" text="Müşteriler" />
+          <Button fx:id="personelyonetim" mnemonicParsing="false" style="-fx-background-color: white; -fx-border-color: #0598ff;" text="Personel Yönetimi" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>
