@@ -77,5 +77,5 @@ Projemizin özgün özelliği olan dijital sıra sistemi paylaşılmamaktadır. 
 
 ##
 
-![logo](https://github.com/user-attachments/assets/f16d3c79-fbf1-4601-abe2-90d07caa1967)
+                                                             ![logo](https://github.com/user-attachments/assets/f16d3c79-fbf1-4601-abe2-90d07caa1967)
 
