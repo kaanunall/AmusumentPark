@@ -75,4 +75,7 @@ Projemizin özgün özelliği olan dijital sıra sistemi paylaşılmamaktadır. 
 
 4. Yapay zekayı sadece sıra sistemi için değil aynı zaman da kullanıcı panelin de bir sohbet botu olarakta kullanmayı düşünüyoruz. Bu sohbet botu ile Lunapark hakkında bilgilere ulaşmak daha basit olacak.
 
----
+##
+
+![logo](https://github.com/user-attachments/assets/f16d3c79-fbf1-4601-abe2-90d07caa1967)
+
