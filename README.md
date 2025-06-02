@@ -1,4 +1,4 @@
-# 🎡 Lunapark Otomasyonu (JavaFX & FXML)
+# 🎡 Lunapark Otomasyonu v1.0 (JavaFX & FXML)
 
 Bu proje, JavaFX ve FXML kullanılarak geliştirilmiş, temel Lunapark sistemlerine ait özelliklere sahip olmakla birlikte fiziksel sırayı ortadan kaldırmayı hedefleyen ve bekleme süresini en aza indirerek zaman konusunda verimliliği en şeffaf haliyle ele alan bir projedir.
 ---
@@ -21,11 +21,17 @@ Proje öncesinde JavaFX ve Lunapark sistemleri üzerine literatür taraması yap
 
 ---
 
+## 📢 Demo İçerik Paylaşımı
+
+Projemizin özgün özelliği olan dijital sıra sistemi paylaşılmamaktadır. Bu kodların paylaşımını şimdilik gizli tutuyoruz. İleri zamanlar da paylaşıma sunulabilir.
+
+---
+
 ## 🎓 Baş Danışman
 
 | 📌 Danışman Adı         | 🎓 Ünvanı                  |
 |-------------------------|-----------------------------|
-| 👨‍🏫 **Ögr. Gör. Naciye MACİT ** | Bilgisayar Programcılığı Bölümü |
+| 👨‍🏫 Ögr. Gör. Naciye MACİT  | Bilgisayar Programcılığı Bölümü |
 
 ---
 
@@ -33,6 +39,8 @@ Proje öncesinde JavaFX ve Lunapark sistemleri üzerine literatür taraması yap
 
 - Java 17+
 - JavaFX
+- CSS
+- SQL
 - FXML
 - SceneBuilder
 - JDBC (Veritabanı bağlantısı için)
@@ -56,7 +64,15 @@ Proje öncesinde JavaFX ve Lunapark sistemleri üzerine literatür taraması yap
 
 
 ---
+## 💡 Bir Sonraki Güncelleme İçeriği
 
+1. Projemiz de bulunan dijital sıra özelliğini yapay zeka ile destekleyerek daha ileri bir düzeye çıkarmayı planlıyor ve bunun için çalışmalarımıza devam ediyoruz.
+   Yapay zeka kullanarak bekleme sürelerini en aza indirerek sıraya girilen oyuncakların kullanım sırası kullanıcıya yapay zeka tarafından sunulacak ve verimlilik elde edilmiş olacak.
 
+2. Navigasyon API kullanımı ile Lunapark konumuna gidebilmek için en hızlı ve güvenli rotayı hesaplayarak sizi konuma ulaştıracak bir sistem üzerine çalışıyoruz.
+
+3. Uygulamanın aynı veritabanını kullanacağı ve paylaşacağı bir entegre mobil uygulama (Şimdilik Android 7.0 ve üzeri için.) geliştiriyoruz.
+
+4. Yapay zekayı sadece sıra sistemi için değil aynı zaman da kullanıcı panelin de bir sohbet botu olarakta kullanmayı düşünüyoruz. Bu sohbet botu ile Lunapark hakkında bilgilere ulaşmak daha basit olacak.
 
 ---
