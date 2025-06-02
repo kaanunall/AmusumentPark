@@ -1,4 +1,4 @@
-# 🛒 Lunapark Otomasyonu (JavaFX & FXML)
+# 🎡 Lunapark Otomasyonu (JavaFX & FXML)
 
 Bu proje, JavaFX ve FXML kullanılarak geliştirilmiş, temel Lunapark sistemlerine ait özelliklere sahip olmakla birlikte fiziksel sırayı ortadan kaldırmayı hedefleyen ve bekleme süresini en aza indirerek zaman konusunda verimliliği en şeffaf haliyle ele alan bir projedir.
 ---
